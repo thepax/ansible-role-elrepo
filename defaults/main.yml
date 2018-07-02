@@ -1,14 +1,11 @@
 ---
 elrepo_repo_gpg_key_url: "/etc/pki/rpm-gpg/RPM-GPG-KEY-elrepo.org"
 
-elrepo_release_url5: "http://www.elrepo.org/elrepo-release-5-5.el5.elrepo.noarch.rpm"
-elrepo_release_url6: "http://www.elrepo.org/elrepo-release-6-6.el6.elrepo.noarch.rpm"
-elrepo_release_url7: "http://www.elrepo.org/elrepo-release-7.0-2.el7.elrepo.noarch.rpm"
+elrepo_release_url6: "http://www.elrepo.org/elrepo-release-6-8.el6.elrepo.noarch.rpm"
+elrepo_release_url7: "http://www.elrepo.org/elrepo-release-7.0-3.el7.elrepo.noarch.rpm"
 
 elrepo_release_url: |
-    {% if ansible_distribution_major_version == "5" %}
-    {{elrepo_release_url5}}{% else %}
     {% if ansible_distribution_major_version == "6" %}
     {{elrepo_release_url6}}{% else %}
-    {{elrepo_release_url7}}{% endif %}
+    {{elrepo_release_url7}}
     {% endif %}
