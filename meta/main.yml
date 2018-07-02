@@ -4,6 +4,7 @@ galaxy_info:
   description: RHEL/CentOS - ELRepo Project
   license: GPL
   min_ansible_version: 2.0
+  dependencies: []
   platforms:
     - name: EL
       versions:
