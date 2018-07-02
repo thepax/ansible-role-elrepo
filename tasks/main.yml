@@ -8,7 +8,7 @@
 
 - name: Install ELRepo
   yum: name={{ elrepo_release_url }} state=present
-  when: check_elrepo|changed
+  when: check_elrepo is changed
   tags: packages
 
 - name: Import ELRepo GPG key
